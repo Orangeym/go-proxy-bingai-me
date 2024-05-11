@@ -93,12 +93,6 @@ const msLoginContext = ref({
   context: {}
 });
 
-const GetLastVersion = async () => {
-  const res = await fetch('https://api.github.com/repos/Harry-zklcdc/go-proxy-bingai/releases/latest');
-  const json = await res.json();
-  lastVersion.value = json.tag_name;
-};
-
 const navType = {
   login: 'login',
   setting: 'setting',
@@ -276,15 +270,7 @@ const handleSelect = async (key: string) => {
       break;
     case navType.about:
       {
-        GetLastVersion();
-        await sleep(25)
-        const ele = document.createElement('div');
-        render(h(NConfigProvider, { theme: theme.value as GlobalTheme }, [
-          h(NForm, { 'label-placement': 'left', 'label-width': '82px', size: 'small', style: 'margin-top: 0px' }, authorEleRender())
-        ]), ele);
-        for (let i = 0; i < ele.childNodes.length; i++) {
-          document.getElementById('latestVersion')?.parentNode?.appendChild(ele.childNodes[i]);
-        }
+      
       }
       break;
     default:
