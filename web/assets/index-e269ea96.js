@@ -436,7 +436,510 @@ ${o}
  `)),He("dialog",[Jd(`
  width: 446px;
  max-width: calc(100vw - 32px);
- `)])]),hw={default:()=>E(ps,null),info:()=>E(ps,null),success:()=>E(Vu,null),warning:()=>E(Uu,null),error:()=>E(Nu,null)},op=_e({name:"Dialog",alias:["NimbusConfirmCard","Confirm"],props:Object.assign(Object.assign({},vo.props),mi),setup(e){const{mergedComponentPropsRef:o,mergedClsPrefixRef:t,inlineThemeDisabled:r,mergedRtlRef:n}=Wt(e),i=ln("Dialog",n,t),s=ne(()=>{var h,p;const{iconPlacement:x}=e;return x||((p=(h=o==null?void 0:o.value)===null||h===void 0?void 0:h.Dialog)===null||p===void 0?void 0:p.iconPlacement)||"left"});function l(h){const{onPositiveClick:p}=e;p&&p(h)}function a(h){const{onNegativeClick:p}=e;p&&p(h)}function d(){const{onClose:h}=e;h&&h()}const c=vo("Dialog","-dialog",pw,cl,e,t),u=ne(()=>{const{type:h}=e,p=s.value,{common:{cubicBezierEaseInOut:x},self:{fontSize:C,lineHeight:m,border:y,titleTextColor:H,textColor:T,color:I,closeBorderRadius:w,closeColorHover:v,closeColorPressed:S,closeIconColor:P,closeIconColorHover:O,closeIconColorPressed:V,closeIconSize:z,borderRadius:Z,titleFontWeight:le,titleFontSize:me,padding:Q,iconSize:q,actionSpace:ce,contentMargin:Te,closeSize:Ee,[p==="top"?"iconMarginIconTop":"iconMargin"]:Le,[p==="top"?"closeMarginIconTop":"closeMargin"]:ie,[pe("iconColor",h)]:Ie}}=c.value,Ge=Vs(Le);return{"--n-font-size":C,"--n-icon-color":Ie,"--n-bezier":x,"--n-close-margin":ie,"--n-icon-margin-top":Ge.top,"--n-icon-margin-right":Ge.right,"--n-icon-margin-bottom":Ge.bottom,"--n-icon-margin-left":Ge.left,"--n-icon-size":q,"--n-close-size":Ee,"--n-close-icon-size":z,"--n-close-border-radius":w,"--n-close-color-hover":v,"--n-close-color-pressed":S,"--n-close-icon-color":P,"--n-close-icon-color-hover":O,"--n-close-icon-color-pressed":V,"--n-color":I,"--n-text-color":T,"--n-border-radius":Z,"--n-padding":Q,"--n-line-height":m,"--n-border":y,"--n-content-margin":Te,"--n-title-font-size":me,"--n-title-font-weight":le,"--n-title-text-color":H,"--n-action-space":ce}}),f=r?hr("dialog",ne(()=>`${e.type[0]}${s.value[0]}`),u,e):void 0;return{mergedClsPrefix:t,rtlEnabled:i,mergedIconPlacement:s,mergedTheme:c,handlePositiveClick:l,handleNegativeClick:a,handleCloseClick:d,cssVars:r?void 0:u,themeClass:f==null?void 0:f.themeClass,onRender:f==null?void 0:f.onRender}},render(){var e;const{bordered:o,mergedIconPlacement:t,cssVars:r,closable:n,showIcon:i,title:s,content:l,action:a,negativeText:d,positiveText:c,positiveButtonProps:u,negativeButtonProps:f,handlePositiveClick:h,handleNegativeClick:p,mergedTheme:x,loading:C,type:m,mergedClsPrefix:y}=this;(e=this.onRender)===null||e===void 0||e.call(this);const H=i?E(ol,{clsPrefix:y,class:`${y}-dialog__icon`},{default:()=>Ro(this.$slots.icon,I=>I||(this.icon?wt(this.icon):hw[this.type]()))}):null,T=Ro(this.$slots.action,I=>I||c||d||a?E("div",{class:[`${y}-dialog__action`,this.actionClass],style:this.actionStyle},I||(a?[wt(a)]:[this.negativeText&&E(nc,Object.assign({theme:x.peers.Button,themeOverrides:x.peerOverrides.Button,ghost:!0,size:"small",onClick:p},f),{default:()=>wt(this.negativeText)}),this.positiveText&&E(nc,Object.assign({theme:x.peers.Button,themeOverrides:x.peerOverrides.Button,size:"small",type:m==="default"?"primary":m,disabled:C,loading:C,onClick:h},u),{default:()=>wt(this.positiveText)})])):null);return E("div",{class:[`${y}-dialog`,this.themeClass,this.closable&&`${y}-dialog--closable`,`${y}-dialog--icon-${t}`,o&&`${y}-dialog--bordered`,this.rtlEnabled&&`${y}-dialog--rtl`],style:r,role:"dialog"},n?Ro(this.$slots.close,I=>{const w=[`${y}-dialog__close`,this.rtlEnabled&&`${y}-dialog--rtl`];return I?E("div",{class:w},I):E(tl,{clsPrefix:y,class:w,onClick:this.handleCloseClick})}):null,i&&t==="top"?E("div",{class:`${y}-dialog-icon-container`},H):null,E("div",{class:[`${y}-dialog__title`,this.titleClass],style:this.titleStyle},i&&t==="left"?H:null,sa(this.$slots.header,()=>[wt(s)])),E("div",{class:[`${y}-dialog__content`,T?"":`${y}-dialog__content--last`,this.contentClass],style:this.contentStyle},sa(this.$slots.default,()=>[wt(l)])),T)}}),tp="n-dialog-provider",gw="n-dialog-api",mw="n-dialog-reactive-list",rp=e=>{const{modalColor:o,textColor2:t,boxShadow3:r}=e;return{color:o,textColor:t,boxShadow:r}},bw={name:"Modal",common:N,peers:{Scrollbar:lo,Dialog:cl,Card:il},self:rp},np=bw,vw={name:"Modal",common:W,peers:{Scrollbar:ho,Dialog:Jf,Card:yf},self:rp},Cw=vw,dl=Object.assign(Object.assign({},sl),mi),xw=Gs(dl),Sw=_e({name:"ModalBody",inheritAttrs:!1,props:Object.assign(Object.assign({show:{type:Boolean,required:!0},preset:String,displayDirective:{type:String,required:!0},trapFocus:{type:Boolean,default:!0},autoFocus:{type:Boolean,default:!0},blockScroll:Boolean},dl),{renderMask:Function,onClickoutside:Function,onBeforeLeave:{type:Function,required:!0},onAfterLeave:{type:Function,required:!0},onPositiveClick:{type:Function,required:!0},onNegativeClick:{type:Function,required:!0},onClose:{type:Function,required:!0},onAfterEnter:Function,onEsc:Function}),setup(e){const o=te(null),t=te(null),r=te(e.show),n=te(null),i=te(null);Lo(Uo(e,"show"),C=>{C&&(r.value=!0)}),Pv(ne(()=>e.blockScroll&&r.value));const s=Ae(su);function l(){if(s.transformOriginRef.value==="center")return"";const{value:C}=n,{value:m}=i;if(C===null||m===null)return"";if(t.value){const y=t.value.containerScrollTop;return`${C}px ${m+y}px`}return""}function a(C){if(s.transformOriginRef.value==="center")return;const m=s.getMousePosition();if(!m||!t.value)return;const y=t.value.containerScrollTop,{offsetLeft:H,offsetTop:T}=C;if(m){const I=m.y,w=m.x;n.value=-(H-w),i.value=-(T-I-y)}C.style.transformOrigin=l()}function d(C){rr(()=>{a(C)})}function c(C){C.style.transformOrigin=l(),e.onBeforeLeave()}function u(){r.value=!1,n.value=null,i.value=null,e.onAfterLeave()}function f(){const{onClose:C}=e;C&&C()}function h(){e.onNegativeClick()}function p(){e.onPositiveClick()}const x=te(null);return Lo(x,C=>{C&&rr(()=>{const m=C.el;m&&o.value!==m&&(o.value=m)})}),ro(Fb,o),ro(Wb,null),ro(Nb,null),{mergedTheme:s.mergedThemeRef,appear:s.appearRef,isMounted:s.isMountedRef,mergedClsPrefix:s.mergedClsPrefixRef,bodyRef:o,scrollbarRef:t,displayed:r,childNodeRef:x,handlePositiveClick:p,handleNegativeClick:h,handleCloseClick:f,handleAfterLeave:u,handleBeforeLeave:c,handleEnter:d}},render(){const{$slots:e,$attrs:o,handleEnter:t,handleAfterLeave:r,handleBeforeLeave:n,preset:i,mergedClsPrefix:s}=this;let l=null;if(!i){if(l=eb(e),!l){Wn("modal","default slot is empty");return}l=Go(l),l.props=Ws({class:`${s}-modal`},o,l.props||{})}return this.displayDirective==="show"||this.displayed||this.show?Ui(E("div",{role:"none",class:`${s}-modal-body-wrapper`},E(P1,{ref:"scrollbarRef",theme:this.mergedTheme.peers.Scrollbar,themeOverrides:this.mergedTheme.peerOverrides.Scrollbar,contentClass:`${s}-modal-scroll-content`},{default:()=>{var a;return[(a=this.renderMask)===null||a===void 0?void 0:a.call(this),E($v,{disabled:!this.trapFocus,active:this.show,onEsc:this.onEsc,autoFocus:this.autoFocus},{default:()=>{var d;return E(pt,{name:"fade-in-scale-up-transition",appear:(d=this.appear)!==null&&d!==void 0?d:this.isMounted,onEnter:t,onAfterEnter:this.onAfterEnter,onAfterLeave:r,onBeforeLeave:n},{default:()=>{const c=[[Ul,this.show]],{onClickoutside:u}=this;return u&&c.push([Ub,this.onClickoutside,void 0,{capture:!0}]),Ui(this.preset==="confirm"||this.preset==="dialog"?E(op,Object.assign({},this.$attrs,{class:[`${s}-modal`,this.$attrs.class],ref:"bodyRef",theme:this.mergedTheme.peers.Dialog,themeOverrides:this.mergedTheme.peerOverrides.Dialog},jn(this.$props,ep),{"aria-modal":"true"}),e):this.preset==="card"?E(QS,Object.assign({},this.$attrs,{ref:"bodyRef",class:[`${s}-modal`,this.$attrs.class],theme:this.mergedTheme.peers.Card,themeOverrides:this.mergedTheme.peerOverrides.Card},jn(this.$props,YS),{"aria-modal":"true",role:"dialog"}),e):this.childNodeRef=l,c)}})}})]}})),[[Ul,this.displayDirective==="if"||this.displayed||this.show]]):null}}),yw=U([He("modal-container",`
+ `)])]),
+    hw = {
+default:
+    () = >E(ps, null),
+    info: () = >E(ps, null),
+    success: () = >E(Vu, null),
+    warning: () = >E(Uu, null),
+    error: () = >E(Nu, null)
+},
+op = _e({
+    name: "Dialog",
+    alias: ["NimbusConfirmCard", "Confirm"],
+    props: Object.assign(Object.assign({},
+    vo.props), mi),
+    setup(e) {
+        const {
+            mergedComponentPropsRef: o,
+            mergedClsPrefixRef: t,
+            inlineThemeDisabled: r,
+            mergedRtlRef: n
+        } = Wt(e),
+        i = ln("Dialog", n, t),
+        s = ne(() = >{
+            var h, p;
+            const {
+                iconPlacement: x
+            } = e;
+            return x || ((p = (h = o == null ? void 0 : o.value) === null || h === void 0 ? void 0 : h.Dialog) === null || p === void 0 ? void 0 : p.iconPlacement) || "left"
+        });
+        function l(h) {
+            const {
+                onPositiveClick: p
+            } = e;
+            p && p(h)
+        }
+        function a(h) {
+            const {
+                onNegativeClick: p
+            } = e;
+            p && p(h)
+        }
+        function d() {
+            const {
+                onClose: h
+            } = e;
+            h && h()
+        }
+        const c = vo("Dialog", "-dialog", pw, cl, e, t),
+        u = ne(() = >{
+            const {
+                type: h
+            } = e,
+            p = s.value,
+            {
+                common: {
+                    cubicBezierEaseInOut: x
+                },
+                self: {
+                    fontSize: C,
+                    lineHeight: m,
+                    border: y,
+                    titleTextColor: H,
+                    textColor: T,
+                    color: I,
+                    closeBorderRadius: w,
+                    closeColorHover: v,
+                    closeColorPressed: S,
+                    closeIconColor: P,
+                    closeIconColorHover: O,
+                    closeIconColorPressed: V,
+                    closeIconSize: z,
+                    borderRadius: Z,
+                    titleFontWeight: le,
+                    titleFontSize: me,
+                    padding: Q,
+                    iconSize: q,
+                    actionSpace: ce,
+                    contentMargin: Te,
+                    closeSize: Ee,
+                    [p === "top" ? "iconMarginIconTop": "iconMargin"] : Le,
+                    [p === "top" ? "closeMarginIconTop": "closeMargin"] : ie,
+                    [pe("iconColor", h)] : Ie
+                }
+            } = c.value,
+            Ge = Vs(Le);
+            return {
+                "--n-font-size": C,
+                "--n-icon-color": Ie,
+                "--n-bezier": x,
+                "--n-close-margin": ie,
+                "--n-icon-margin-top": Ge.top,
+                "--n-icon-margin-right": Ge.right,
+                "--n-icon-margin-bottom": Ge.bottom,
+                "--n-icon-margin-left": Ge.left,
+                "--n-icon-size": q,
+                "--n-close-size": Ee,
+                "--n-close-icon-size": z,
+                "--n-close-border-radius": w,
+                "--n-close-color-hover": v,
+                "--n-close-color-pressed": S,
+                "--n-close-icon-color": P,
+                "--n-close-icon-color-hover": O,
+                "--n-close-icon-color-pressed": V,
+                "--n-color": I,
+                "--n-text-color": T,
+                "--n-border-radius": Z,
+                "--n-padding": Q,
+                "--n-line-height": m,
+                "--n-border": y,
+                "--n-content-margin": Te,
+                "--n-title-font-size": me,
+                "--n-title-font-weight": le,
+                "--n-title-text-color": H,
+                "--n-action-space": ce
+            }
+        }),
+        f = r ? hr("dialog", ne(() = >`$ {
+            e.type[0]
+        }
+        $ {
+            s.value[0]
+        }`), u, e) : void 0;
+        return {
+            mergedClsPrefix: t,
+            rtlEnabled: i,
+            mergedIconPlacement: s,
+            mergedTheme: c,
+            handlePositiveClick: l,
+            handleNegativeClick: a,
+            handleCloseClick: d,
+            cssVars: r ? void 0 : u,
+            themeClass: f == null ? void 0 : f.themeClass,
+            onRender: f == null ? void 0 : f.onRender
+        }
+    },
+    render() {
+        var e;
+        const {
+            bordered: o,
+            mergedIconPlacement: t,
+            cssVars: r,
+            closable: n,
+            showIcon: i,
+            title: s,
+            content: l,
+            action: a,
+            negativeText: d,
+            positiveText: c,
+            positiveButtonProps: u,
+            negativeButtonProps: f,
+            handlePositiveClick: h,
+            handleNegativeClick: p,
+            mergedTheme: x,
+            loading: C,
+            type: m,
+            mergedClsPrefix: y
+        } = this; (e = this.onRender) === null || e === void 0 || e.call(this);
+        {
+        default:
+            () = >Ro(this.$slots.icon, I = >I || (this.icon ? wt(this.icon) : hw[this.type]()))
+        }) : null,
+        I || (a ? [wt(a)] : [this.negativeText && E(nc, Object.assign({
+            theme: x.peers.Button,
+            themeOverrides: x.peerOverrides.Button,
+            ghost: !0,
+            size: "small",
+            onClick: p
+        },
+        f), {
+        default:
+            () = >wt(this.negativeText)
+        }), this.positiveText && E(nc, Object.assign({
+            theme: x.peers.Button,
+            themeOverrides: x.peerOverrides.Button,
+            size: "small",
+            type: m === "default" ? "primary": m,
+            disabled: C,
+            loading: C,
+            onClick: h
+        },
+        u), {
+        default:
+            () = >wt(this.positiveText)
+        })])) : null);
+        return E("div", {
+            class: [`$ {
+                y
+            } - dialog`, this.themeClass, this.closable && `$ {
+                y
+            } - dialog--closable`, `$ {
+                y
+            } - dialog--icon - $ {
+                t
+            }`, o && `$ {
+                y
+            } - dialog--bordered`, this.rtlEnabled && `$ {
+                y
+            } - dialog--rtl`],
+            style: r,
+            role: "dialog"
+        },
+        H) : null, i && t === "left" ? H: null, sa(this.$slots.header, () = >[wt(s)])),
+        sa(this.$slots.
+    default, () = >[wt(l)])),
+        T)
+    }
+}),
+tp = "n-dialog-provider",
+gw = "n-dialog-api",
+mw = "n-dialog-reactive-list",
+rp = e = >{
+    const {
+        modalColor: o,
+        textColor2: t,
+        boxShadow3: r
+    } = e;
+    return {
+        color: o,
+        textColor: t,
+        boxShadow: r
+    }
+},
+bw = {
+    name: "Modal",
+    common: N,
+    peers: {
+        Scrollbar: lo,
+        Dialog: cl,
+        Card: il
+    },
+    self: rp
+},
+np = bw,
+vw = {
+    name: "Modal",
+    common: W,
+    peers: {
+        Scrollbar: ho,
+        Dialog: Jf,
+        Card: yf
+    },
+    self: rp
+},
+Cw = vw,
+dl = Object.assign(Object.assign({},
+sl), mi),
+xw = Gs(dl),
+Sw = _e({
+    name: "ModalBody",
+    inheritAttrs: !1,
+    props: Object.assign(Object.assign({
+        show: {
+            type: Boolean,
+            required: !0
+        },
+        preset: String,
+        displayDirective: {
+            type: String,
+            required: !0
+        },
+        trapFocus: {
+            type: Boolean,
+        default:
+            !0
+        },
+        autoFocus: {
+            type: Boolean,
+        default:
+            !0
+        },
+        blockScroll: Boolean
+    },
+    dl), {
+        renderMask: Function,
+        onClickoutside: Function,
+        onBeforeLeave: {
+            type: Function,
+            required: !0
+        },
+        onAfterLeave: {
+            type: Function,
+            required: !0
+        },
+        onPositiveClick: {
+            type: Function,
+            required: !0
+        },
+        onNegativeClick: {
+            type: Function,
+            required: !0
+        },
+        onClose: {
+            type: Function,
+            required: !0
+        },
+        onAfterEnter: Function,
+        onEsc: Function
+    }),
+    setup(e) {
+        const o = te(null),
+        t = te(null),
+        r = te(e.show),
+        n = te(null),
+        i = te(null);
+        Lo(Uo(e, "show"), C = >{
+            C && (r.value = !0)
+        }),
+        Pv(ne(() = >e.blockScroll && r.value));
+        const s = Ae(su);
+        function l() {
+            if (s.transformOriginRef.value === "center") return "";
+            const {
+                value: C
+            } = n,
+            {
+                value: m
+            } = i;
+            if (C === null || m === null) return "";
+            if (t.value) {
+                const y = t.value.containerScrollTop;
+                return`$ {
+                    C
+                }
+                px $ {
+                    m + y
+                }
+                px`
+            }
+            return ""
+        }
+        function a(C) {
+            if (s.transformOriginRef.value === "center") return;
+            const m = s.getMousePosition();
+            if (!m || !t.value) return;
+            const y = t.value.containerScrollTop,
+            {
+                offsetLeft: H,
+                offsetTop: T
+            } = C;
+            if (m) {
+                const I = m.y,
+                w = m.x;
+                n.value = -(H - w),
+                i.value = -(T - I - y)
+            }
+            C.style.transformOrigin = l()
+        }
+        function d(C) {
+            rr(() = >{
+                a(C)
+            })
+        }
+        function c(C) {
+            C.style.transformOrigin = l(),
+            e.onBeforeLeave()
+        }
+        function u() {
+            r.value = !1,
+            n.value = null,
+            i.value = null,
+            e.onAfterLeave()
+        }
+        function f() {
+            const {
+                onClose: C
+            } = e;
+            C && C()
+        }
+        function h() {
+            e.onNegativeClick()
+        }
+        function p() {
+            e.onPositiveClick()
+        }
+        const x = te(null);
+        return Lo(x, C = >{
+            C && rr(() = >{
+                const m = C.el;
+                m && o.value !== m && (o.value = m)
+            })
+        }),
+        ro(Fb, o),
+        ro(Wb, null),
+        ro(Nb, null),
+        {
+            mergedTheme: s.mergedThemeRef,
+            appear: s.appearRef,
+            isMounted: s.isMountedRef,
+            mergedClsPrefix: s.mergedClsPrefixRef,
+            bodyRef: o,
+            scrollbarRef: t,
+            displayed: r,
+            childNodeRef: x,
+            handlePositiveClick: p,
+            handleNegativeClick: h,
+            handleCloseClick: f,
+            handleAfterLeave: u,
+            handleBeforeLeave: c,
+            handleEnter: d
+        }
+    },
+    render() {
+        const {
+            $slots: e,
+            $attrs: o,
+            handleEnter: t,
+            handleAfterLeave: r,
+            handleBeforeLeave: n,
+            preset: i,
+            mergedClsPrefix: s
+        } = this;
+        let l = null;
+        if (!i) {
+            if (l = eb(e), !l) {
+                Wn("modal", "default slot is empty");
+                return
+            }
+            l = Go(l),
+            l.props = Ws({
+                class: `$ {
+                    s
+                } - modal`
+            },
+            o, l.props || {})
+        }
+        return this.displayDirective === "show" || this.displayed || this.show ? Ui(E("div", {
+            role: "none",
+            class: `$ {
+                s
+            } - modal - body - wrapper`
+        },
+        E(P1, {
+            ref: "scrollbarRef",
+            theme: this.mergedTheme.peers.Scrollbar,
+            themeOverrides: this.mergedTheme.peerOverrides.Scrollbar,
+            contentClass: `$ {
+                s
+            } - modal - scroll - content`
+        },
+        {
+        default:
+            () = >{
+                var a;
+                return [(a = this.renderMask) === null || a === void 0 ? void 0 : a.call(this), E($v, {
+                    disabled: !this.trapFocus,
+                    active: this.show,
+                    onEsc: this.onEsc,
+                    autoFocus: this.autoFocus
+                },
+                {
+                default:
+                    () = >{
+                        var d;
+                        return E(pt, {
+                            name: "fade-in-scale-up-transition",
+                            appear: (d = this.appear) !== null && d !== void 0 ? d: this.isMounted,
+                            onEnter: t,
+                            onAfterEnter: this.onAfterEnter,
+                            onAfterLeave: r,
+                            onBeforeLeave: n
+                        },
+                        {
+                        default:
+                            () = >{
+                                const c = [[Ul, this.show]],
+                                {
+                                    onClickoutside: u
+                                } = this;
+                                return u && c.push([Ub, this.onClickoutside, void 0, {
+                                    capture: !0
+                                }]),
+                                Ui(this.preset === "confirm" || this.preset === "dialog" ? E(op, Object.assign({},
+                                this.$attrs, {
+                                    class: [`$ {
+                                        s
+                                    } - modal`, this.$attrs.class],
+                                    ref: "bodyRef",
+                                    theme: this.mergedTheme.peers.Dialog,
+                                    themeOverrides: this.mergedTheme.peerOverrides.Dialog
+                                },
+                                jn(this.$props, ep), {
+                                    "aria-modal": "true"
+                                }), e) : this.preset === "card" ? E(QS, Object.assign({},
+                                this.$attrs, {
+                                    ref: "bodyRef",
+                                    class: [`$ {
+                                        s
+                                    } - modal`, this.$attrs.class],
+                                    theme: this.mergedTheme.peers.Card,
+                                    themeOverrides: this.mergedTheme.peerOverrides.Card
+                                },
+                                jn(this.$props, YS), {
+                                    "aria-modal": "true",
+                                    role: "dialog"
+                                }), e) : this.childNodeRef = l, c)
+                            }
+                        })
+                    }
+                })]
+            }
+        })), [[Ul, this.displayDirective === "if" || this.displayed || this.show]]) : null
+    }
+}),
+yw = U([He("modal-container", `
  position: fixed;
  left: 0;
  top: 0;
