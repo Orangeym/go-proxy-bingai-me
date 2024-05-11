@@ -15,7 +15,6 @@ import { useUserStore } from '@/stores/modules/user';
 const isShowMore = ref(false);
 const isShowSettingModal = ref(false);
 const isShowAdvancedSettingModal = ref(false);
-const isShowSetAboutModal = ref(false);
 const isShowCookieModal = ref(false);
 const isShowLoginModal = ref(false);
 const isShowIframe = ref(false);
@@ -277,7 +276,6 @@ const handleSelect = async (key: string) => {
       break;
     case navType.about:
       {
-        isShowSetAboutModal.value = true;
         GetLastVersion();
         await sleep(25)
         const ele = document.createElement('div');
@@ -949,11 +947,6 @@ const autoPassCFChallenge = async () => {
     <template #action>
       <NButton size="large" @click="isShowClearCacheModal = false">取消</NButton>
       <NButton ghost size="large" type="error" @click="resetCache">确定</NButton>
-    </template>
-  </NModal>
-  <NModal v-model:show="isShowSetAboutModal" preset="dialog" :show-icon="false">
-    <template #action>
-      <NButton ghost size="large" @click="isShowSetAboutModal = false" type="info">确定</NButton>
     </template>
   </NModal>
   <CreateImage v-model:show="isShowCreateImageModal" />
