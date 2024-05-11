@@ -24,7 +24,6 @@ const WEB_CONFIG = {
 const RAND_IP_COOKIE_NAME = 'BingAI_Rand_IP';
 const AUTH_KEY_COOKIE_NAME = 'BingAI_Auth_Key';
 
-const SYDNEY_ORIGIN = 'https://sydney.bing.com';
 const BING_ORIGIN = 'https://www.bing.com';
 const BING_SOURCE_ORIGIN = 'https://th.bing.com';
 const BING_SR_ORIGIN = 'https://sr.bing.com';
