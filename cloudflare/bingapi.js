@@ -2,7 +2,6 @@ const AUTHOR = 'Harry-zklcdc/go-proxy-bingai';
 
 const SPILT = '\x1e';
 const BING_ORIGIN = 'https://www.bing.com';
-const SYDNEY_ORIGIN = 'https://sydney.bing.com';
 
 export const bingchatModel = {
   PRECISE: 'Precise',          // 精准
