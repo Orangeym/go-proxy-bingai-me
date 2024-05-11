@@ -956,17 +956,6 @@ const autoPassCFChallenge = async () => {
     </template>
   </NModal>
   <NModal v-model:show="isShowSetAboutModal" preset="dialog" :show-icon="false">
-    <template #header>
-      <div class="text-3xl py-2">关于</div>
-    </template>
-    <NForm ref="formRef" label-placement="left" label-width="82px" size="small" style="margin-top: 16px;">
-      <NFormItem path="version" label="版本号">
-        <NTag type="info" size="small" round>{{ 'v' + localVersion }}</NTag>
-      </NFormItem>
-      <NFormItem path="latestVersion" label="最新版本" id="latestVersion" ref="latestVersion">
-        <NTag type="info" size="small" round>{{ lastVersion }}</NTag>
-      </NFormItem>
-    </NForm>
     <template #action>
       <NButton ghost size="large" @click="isShowSetAboutModal = false" type="info">确定</NButton>
     </template>
